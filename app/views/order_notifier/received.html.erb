@@ -2,11 +2,16 @@
 <p>Administration Pragmatic Store thanks you for your recent order.</p>
 <p>You order next Items:</p>
 <table>
-<tr>
-  <th>Count</th>
-  <th>Product</th>
-  <th>Price</th>
-  <%= render @order.line_items -%>
-</tr>
+  <tr>
+    <th>Count</th>
+    <th>Product</th>
+    <th>Price</th>
+    <%= render @order.line_items -%>
+  </tr>
 </table>
-
+<table>
+  <tr>
+    <th> Total price:</th>
+    <th><%= render @order.line_items.total_price  -%></th>
+  </tr>  
+</table>
