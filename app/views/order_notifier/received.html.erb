@@ -1,8 +1,12 @@
-<p>Уважаемый(ая) <%= @order.name %> </p>
-<p>Администрация магазина Pragmatic Store благодарит Вас за недавний заказ.</p>
-<p>Вы заказали следующий товар:</p>
+<p>Dear <%= @order.name %> </p>
+<p>Administration Pragmatic Store thanks you for your recent order.</p>
+<p>You order next Items:</p>
 <table>
-<tr><th colspan="2">К-во и название</th><th>Цена</th></tr>
-<%= render @order.line_items -%>
+<tr>
+  <th>Count</th>
+  <th>Product</th>
+  <th>Price</th>
+  <%= render @order.line_items -%>
+</tr>
 </table>
-<%= render @order.line_item.total_price -%>
+
